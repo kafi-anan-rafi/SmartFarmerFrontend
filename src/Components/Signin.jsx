@@ -1,10 +1,39 @@
-import React from 'react'
+import Axios from 'axios'
+import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
+import config from '../config.json';
 
 function Signin() {
+  const [users, setUsers] = useState([]);
+  const navigate = useNavigate();
+  useEffect(() => {
+    Axios.get(config.apiURL + "posts")
+      .then(res => {
+        console.log(res)
+        setUsers(res.data);
+      })
+      .catch(err => {
+        console.log(err);
+      })
+  }, []);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Submitted");
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+
+    if (email && password) {
+      if (users.type === "farmer")
+        navigate("/farmer")
+      if (users.type === "customer")
+        navigate("/customer")
+      if (users.type === "doctor")
+        navigate("/doctor")
+      if (users.type === "advisor")
+        navigate("/advisor")
+    } else {
+      console.log("No");
+    }
   }
 
   return (
