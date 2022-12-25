@@ -1,6 +1,6 @@
 import React from 'react'
 import carousel from '../Assets/carousel.jpeg';
-import farmer from '../Assets/Farmer.jpg';
+// import farmer from '../Assets/Farmer.jpg';
 
 function Home() {
   return (

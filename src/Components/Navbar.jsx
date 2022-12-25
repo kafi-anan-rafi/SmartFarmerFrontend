@@ -14,8 +14,11 @@ function Navbar({ title }) {
             <Link to="/signin" className="nav-link">
               Signin
             </Link>
-            <Link to="/signup" className="nav-link">
-              Signup
+            <Link to="/customersignup" className="nav-link">
+              Customer Signup
+            </Link>
+            <Link to="/farmersignup" className="nav-link">
+              Farmer Signup
             </Link>
           </div>
         </div>

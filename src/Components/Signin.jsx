@@ -1,5 +1,5 @@
 import Axios from 'axios'
-import React, {  useState } from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import config from '../config.json';
 
@@ -7,7 +7,7 @@ function Signin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [alert, setAlert] = useState(false);
-  
+
   // const navigate = useNavigate();
 
   const handleSubmit = (event) => {
@@ -38,6 +38,7 @@ function Signin() {
   return (
     <div className='content d-flex justify-content-center'>
       <form onSubmit={handleSubmit} className="col-5">
+        <h1>Signin</h1>
         <div className="form-group">
           <label className='mt-20' htmlFor="email">Email address</label>
           <input type="email" onChange={handleEmailChange} className="form-control" id="email" name='email' />

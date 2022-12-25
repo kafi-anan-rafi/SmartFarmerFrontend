@@ -4,8 +4,13 @@ import Navbar from './Components/Navbar';
 import Home from './Pages/Home';
 import NotFound from './Pages/NotFound';
 import Signin from './Components/Signin';
-import Signup from './Components/Signup';
-import Farmer from './Pages/Farmer/Farmer';
+import FarmerSignup from './Components/FarmerSignup';
+import Farmer from './Pages/Farmer';
+import CustomerSignup from './Components/CustomerSignup';
+import BuyProduct from './Pages/BuyProduct';
+import SellProduct from './Pages/SellProduct';
+import BuyEquipment from "./Pages/BuyEquipment";
+import SellEquipment from './Pages/SellEquipment';
 
 function App() {
   return (
@@ -16,7 +21,12 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/signin" element={<Signin />} />
-            <Route path="/signup" element={<Signup />} />
+            <Route path="/farmersignup" element={<FarmerSignup />} />
+            <Route path="/buyproduct" element={<BuyProduct />} />
+            <Route path="/buyequipment" element={<BuyEquipment />} />
+            <Route path="/sellproduct" element={<SellProduct />} />
+            <Route path="/sellequipment" element={<SellEquipment />} />
+            <Route path="/customersignup" element={<CustomerSignup />} />
             <Route path="/farmer" element={<Farmer />} />
             <Route path="/notfound" element={<NotFound />} />
             <Route path="/*" element={<NotFound />} />
